@@ -175,7 +175,38 @@ svg {
 
 /* Search button */
 
+.input-wrapper {
+    width: 150px;
+}
 
+.input-wrapper::after {
+    content: attr(data-text);
+    font-size: 1rem;
+    line-height: 0;
+    height: 0;
+    width: 150px;
+    font-family: 'Oswald';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    user-select: none;
+    color: transparent;
+}
+  
+input {
+    width: 150px;
+    height: 20px;
+    color: #000;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Oswald';
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    overflow: hidden;
+}
 
 /* Filter */
 

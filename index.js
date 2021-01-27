@@ -2,6 +2,12 @@ const toMax = document.getElementById('toMax');
 const toMin = document.getElementById('toMin');
 const wrapperMenu = document.querySelector('.wrapper-menu');
 const svg = document.getElementsByClassName('svg_2');
+const wrapper = document.querySelector('.input-wrapper'),
+      textInput = document.querySelector('input[type="text"]');
+        
+textInput.addEventListener('keyup', event => {
+  wrapper.setAttribute('data-text', event.target.value);
+});
 
 Array.from(svg, el => {
   el.addEventListener('click', () => {
