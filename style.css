@@ -78,13 +78,9 @@ body {
     position: relative;
 }
 
-.content1 {
-    padding-top: 30px;
-}
-
 .container {
-    margin: 30px 510px;
     width: 900px;
+    margin: 30px auto;
 }
 
 .text-content {
@@ -99,6 +95,17 @@ body {
     margin-right: 50px;
 }
 
+.title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -106,6 +113,24 @@ body {
 .lighter {
     font-weight: 100;
     cursor: pointer;
+}
+
+/* Cards */
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 900px;
+}
+
+.card {
+    margin-top: 30px;
+}
+
+.shoe {
+    width: 250px;
+    height: 250px;
 }
 
 /* Tools */
@@ -120,7 +145,7 @@ body {
 .tool {
     height: 20px;
     width: 20px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 /* Filter */
