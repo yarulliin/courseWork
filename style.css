@@ -91,8 +91,8 @@ body {
 .text {
     font-size: 20px;
     font-family: 'Oswald';
-    display: inline-block;
-    margin-right: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 .title {
@@ -119,12 +119,13 @@ body {
 
 #cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
-    width: 900px;
+    width: 900px;    
 }
 
 .card {
+    margin: 30px 25px 0 25px;
     margin-top: 30px;
 }
 
