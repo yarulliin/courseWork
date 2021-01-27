@@ -8,7 +8,7 @@ Array.from(svg, el => {
     if(el.classList.contains('filled')) {
       el.classList.remove('filled')
     }
-    else el.classList.add('filled');
+    else el.classList.toggle('filled');
   })
 })
 
@@ -19,6 +19,7 @@ wrapperMenu.addEventListener('click', function(){
 toMax.addEventListener('click', () => {
     if(getComputedStyle(toMax).fontWeight == 100) {
         toMax.style.fontWeight = 700;
+        toMin.style.fontWeight = 100;
     }
     else toMax.style.fontWeight = 100;
 })
@@ -26,6 +27,7 @@ toMax.addEventListener('click', () => {
 toMin.addEventListener('click', () => {
     if(getComputedStyle(toMin).fontWeight == 100) {
         toMin.style.fontWeight = 700;
+        toMax.style.fontWeight = 100;
     }
     else toMin.style.fontWeight = 100;
 })
