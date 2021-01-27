@@ -1,6 +1,16 @@
 const toMax = document.getElementById('toMax');
 const toMin = document.getElementById('toMin');
 const wrapperMenu = document.querySelector('.wrapper-menu');
+const svg = document.getElementsByClassName('svg_2');
+
+Array.from(svg, el => {
+  el.addEventListener('click', () => {
+    if(el.classList.contains('filled')) {
+      el.classList.remove('filled')
+    }
+    else el.classList.add('filled');
+  })
+})
 
 wrapperMenu.addEventListener('click', function(){
   wrapperMenu.classList.toggle('open');  

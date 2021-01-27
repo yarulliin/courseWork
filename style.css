@@ -125,6 +125,7 @@ body {
 }
 
 .card {
+    width: 250px;
     margin: 30px 25px 0 25px;
     margin-top: 30px;
 }
@@ -132,6 +133,29 @@ body {
 .shoe {
     width: 250px;
     height: 250px;
+}
+
+.info {
+    display: flex;
+}
+
+svg {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+}
+   
+.svg_2 {
+    fill:transparent; 
+    stroke:#000;
+    stroke-width: 10px;
+    cursor:pointer;
+    transition:fill .3s;
+}
+
+.svg_2.filled {
+    fill:#000;
 }
 
 /* Tools */
@@ -148,6 +172,10 @@ body {
     width: 20px;
     margin-left: 20px;
 }
+
+/* Search button */
+
+
 
 /* Filter */
 
