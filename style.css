@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    font-family: 'Oswald';
-}
+    font-family: 'Oswald', sans-serif;}
 
 /* Header */
 
@@ -90,7 +91,6 @@ body {
 
 .text {
     font-size: 20px;
-    font-family: 'Oswald';
     margin-right: 25px;
     margin-left: 25px;
 }
@@ -111,8 +111,77 @@ body {
 }
 
 .lighter {
-    font-weight: 100;
+    font-weight: 200;
     cursor: pointer;
+}
+
+/* Header menu */
+
+.header_menu {
+    border-left: 2px solid #000;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    z-index: 99;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: #fff;
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+
+.header_menu_active {
+    transform: translateX(0%);
+}
+
+.header_menu-list {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+}
+
+.header_menu-list a {
+    margin-bottom: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* Filter menu */ 
+
+.menu {
+    border-right: 2px solid #000;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    width: 272px;
+    height: 100vh;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: #fff;
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu_active {
+    transform: translateX(0%);
+}
+
+.menu-list {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+}
+
+.menu-list a {
+    margin-bottom: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 /* Cards */
@@ -212,17 +281,29 @@ input {
 
 .filter {
     min-height: 100%;
+    width: 90px;
     position: fixed;
+    transition: 0.5s;
     top: 0%;
     border-right: 2px solid #000;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.filter_logo {
-    margin: auto 30px;
-    width: 35px;
-    height: 35px;
+.filter_active {
+    transform: translateX(300%);
+}
+
+#filter_logo {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.filter_logo_active {
+    transform: rotate(360deg);
 }
 
 .made_by {
