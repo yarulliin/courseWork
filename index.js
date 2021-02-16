@@ -2,12 +2,22 @@ const toMax = document.getElementById('toMax');
 const toMin = document.getElementById('toMin');
 const filter = document.getElementById('filter_logo');
 const svg = document.getElementsByClassName('svg_2');
+const account_btns = document.getElementsByClassName('acc_text');
 const wrapperMenu = document.querySelector('.wrapper-menu');
 const wrapper = document.querySelector('.input-wrapper');
 const textInput = document.querySelector("input[type='text']");
 const headerMenu = document.querySelector('.header_menu');
 const filterMenu = document.querySelector('.menu');
 const filterBlock = document.querySelector('.filter');
+
+Array.from(account_btns, el => {
+  el.addEventListener('click', () => {
+    if(getComputedStyle(el).fontWeight == 200) {
+      el.style.fontWeight = 700;
+    }
+    else el.style.fontWeight = 200;
+  })
+})
 
 Array.from(svg, el => {
   el.addEventListener('click', () => {
