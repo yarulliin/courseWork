@@ -137,19 +137,6 @@ body {
     transform: translateX(0%);
 }
 
-.header_menu-list {
-    display: flex;
-    height: 50%;
-    flex-direction: column;
-}
-
-.header_menu-list a {
-    margin-bottom: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-
 /* Filter menu */ 
 
 .menu {
@@ -169,19 +156,6 @@ body {
 
 .menu_active {
     transform: translateX(0%);
-}
-
-.menu-list {
-    display: flex;
-    height: 50%;
-    flex-direction: column;
-}
-
-.menu-list a {
-    margin-bottom: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
 }
 
 /* Cards */
@@ -287,6 +261,8 @@ input {
 }
 
 .acc_text {
+    display: flex;
+    justify-content: center;
     font-size: 30px;
     text-align: center;
     margin-bottom: 30px;
