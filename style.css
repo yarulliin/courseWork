@@ -6,7 +6,8 @@
 }
 
 body {
-    font-family: 'Oswald', sans-serif;}
+    font-family: 'Oswald', sans-serif;
+}
 
 /* Header */
 
@@ -147,8 +148,8 @@ body {
     width: 272px;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     padding-top: 100px;
-    justify-content: center;
     background-color: #fff;
     transition: 0.5s;
     transform: translateX(-100%);
@@ -237,7 +238,7 @@ body {
     color: transparent;
 }
   
-input {
+.search {
     width: 150px;
     height: 20px;
     color: #000;
@@ -258,6 +259,7 @@ input {
     margin: 0 auto;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 
 .acc_text {
@@ -268,11 +270,36 @@ input {
     margin-bottom: 30px;
 }
 
+.hov a {
+	text-decoration: none;
+	position: relative;
+	transition: all .5s;
+}
+
+.hov a:before {
+	content: "";
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	transition: all 0.3s;
+}
+
+.hov a:hover:before {
+	width: 100%;
+	left: 0;
+	background: #000;
+}
+
 .acc {
     display: flex;
     justify-content: center;
     margin-top: 15px;
     margin-bottom: 30px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .media {
@@ -308,6 +335,67 @@ input {
     transform: rotate(360deg);
 }
 
+.filter_container {
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.menu_title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.filter_tag {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tag {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+.reset_text {
+    font-size: 14px;
+}
+
+.reset_params {
+    border-radius: 50px;
+    margin: 0 50px;
+    padding: 7px 10px;
+    background-color: transparent;
+    border: 1px solid #000;
+    transition: .5s;
+    cursor: pointer;
+    outline: none;
+}
+
+.reset_params:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.price_check {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.price_text {
+    font-size: 20px;
+}
+
+#from, #to {
+    margin-right: 5px;
+    padding: 3px;
+    height: 20px;
+    width: 50px;
+    font-size: 15px;
+    font-family: 'Oswald';
+    outline: none;
+    border: 1px solid #000;
+}
+
 .made_by {
     display: flex;
     position: fixed;
@@ -315,6 +403,7 @@ input {
     right: 50px;
     font-size: 36px;
     opacity: .25;
+    z-index: 99;
 }
 
 /* Footer */
@@ -329,10 +418,9 @@ input {
 /* Checkbox and radio */
 
 .checkbox {
-	--background: #fff;
-	--border: #D1D6EE;
-	--border-hover: #BBC1E1;
-	--border-active: #1E2235;
+	--background: transparent;
+	--border: #000;
+	--border-active: #000;
 	--tick: #fff;
 	position: relative;
 }

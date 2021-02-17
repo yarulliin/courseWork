@@ -18,12 +18,20 @@
         </div>
         <div class="header_menu">
             <div class="account">
-                <img class="profile_logo" src="./src/img_383210.png" alt="">
-                <div class="acc bold">Профиль</div>
+                <img class="profile_logo" src="./src/img_383210.png">
+                <p class="hov acc bold">
+                    <a>Профиль</a>
+                </p>
                 <div class="media">
-                    <a class="acc_text lighter">Личный кабинет</a>
-                    <a class="acc_text lighter">Корзина</a>
-                    <a class="acc_text lighter">Избранное</a>
+                    <p class="hov acc_text lighter">
+                        <a>Личный кабинет</a>
+                    </p>
+                    <p class="hov acc_text lighter">
+                        <a>Корзина</a>
+                    </p>
+                    <p class="hov acc_text lighter">
+                        <a>Избранное</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -34,14 +42,62 @@
             <img id="filter_logo" src="./src/img_513653.png">
         </div>
         <div class="menu">
-            <div class="grid">
-                <label class="checkbox bounce">
-                    <input type="checkbox" checked>
-                    <svg viewBox="0 0 21 21">
-                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
-                    </svg>
-                </label>
+            <div class="filter_container">
+                <p class="menu_title bold">Бренд</p>
+                <div class="filter_tag">
+                    <label class="checkbox bounce">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                        </svg>
+                    </label>
+                    <p class="tag lighter">Nike</p>
+                </div>
+                <div class="filter_tag">
+                    <label class="checkbox bounce">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                        </svg>
+                    </label>
+                    <p class="tag lighter">Adidas</p>
+                </div>
             </div>
+            <div class="filter_container">
+                <p class="menu_title bold">Пол</p>
+                <div class="filter_tag">
+                    <label class="checkbox bounce">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                        </svg>
+                    </label>
+                    <p class="tag lighter">Мужчины</p>
+                </div>
+                <div class="filter_tag">
+                    <label class="checkbox bounce">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                        </svg>
+                    </label>
+                    <p class="tag lighter">Женщины</p>
+                </div>
+            </div>
+            <div class="filter_container">
+                <p class="menu_title bold">Цена</p>
+                    <div class="price_check">
+                        <input type="text" id="from">
+                        <p class="price_text lighter">От</p>
+                    </div>
+                    <div class="price_check">
+                        <input type="text" id="to">
+                        <p class="price_text lighter">До</p>
+                    </div>
+            </div>
+            <button class="reset_params">
+                <p class="reset_text lighter">Сбросить параметры</p>
+            </button>
         </div>
         <div class="container">
             <div class="text-content">
@@ -83,7 +139,7 @@
         </div>
         <div class="tools">
             <div class="input-wrapper" data-text="">
-                <input type="text" placeholder="Поиск...">          
+                <input class="search" type="text" placeholder="Поиск...">          
             </div>
             <img class="tool" src="./src/img_112825.png">
             <img class="tool" src="./src/Heart_font_awesome.svg.png">
