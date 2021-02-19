@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 const routes = require('./routes/sneakers')
+const config = require('./config')
 
 const PORT = process.env.PORT || 3000
 
@@ -21,7 +22,7 @@ app.use(routes)
 
 async function start() {
     try {
-        await mongoose.connect('mongodb+srv://yaru:yaru2809@cluster0.wltmm.mongodb.net/sneakershop?retryWrites=true&w=majority', {
+        await mongoose.connect(config.connectionString, {
             useNewUrlParser: true,
             useFindAndModify: false
         })
