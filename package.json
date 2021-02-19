@@ -1,0 +1,30 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yarulliin/courseWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yarulliin/courseWork/issues"
+  },
+  "homepage": "https://github.com/yarulliin/courseWork#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mongoose": "^5.11.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

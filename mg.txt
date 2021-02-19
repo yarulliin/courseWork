@@ -1,0 +1,1 @@
+mongodb+srv://yarullin:qwerty123@cluster0.qpslw.mongodb.net/sneakershop
