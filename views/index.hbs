@@ -1,6 +1,6 @@
-<div class="content">
-    {{> filter}}
-</div>
+{{> header-menu}}
+
+{{> filter}}
 
 <div class="container">
     <div class="text-content">
@@ -10,7 +10,13 @@
     </div>
 
     <div id="cards">
-        
+        {{#if models.length}}
+            {{#each models}}
+                {{> card}}
+            {{/each}}
+        {{else}}
+        <p class="empty bold">Empty</p>
+        {{/if}}
     </div>
 </div>
 <div class="tools">
