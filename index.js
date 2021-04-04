@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const passport = require('passport')
 const bodyParser = require('body-parser')
 const path = require('path')
 const exphbs = require('express-handlebars')
@@ -25,6 +26,8 @@ app.set('view engine', 'hbs')
 app.set('views', 'views')
 
 app.use(express.urlencoded({extended: true}))
+app.use(passport.initialize())
+require('./middleware/passport')(passport)
 
 app.use(routes)
 

@@ -1,9 +1,10 @@
 const {Router} = require('express')
 const model = require('../models/model')
 const controllers = require('../controllers/auth')
+const passport = require('passport')
 const router = Router()
 
-router.get('/', async (req, res) => {
+router.get('/', passport.authenticate('jwt', {session: false}), async (req, res) => {
     const models = await model.find({})
 
     res.render('index', {
